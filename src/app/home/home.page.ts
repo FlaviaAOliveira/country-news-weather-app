@@ -4,6 +4,9 @@ import { addIcons } from 'ionicons';
 import { settingsOutline } from 'ionicons/icons';
 import { RouterLink} from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MyHttpService } from '../services/my-http.service';
+import { MyDataService } from '../services/my-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,11 +19,12 @@ export class HomePage {
   countries: any[] = [];
 
 
-  constructor() {
+  constructor(private router: Router, private mhs: MyHttpService, private mds: MyDataService) {
     addIcons({ settingsOutline });
   }
 
-  search() {
-
+  async search() {
+    this.mds.setCountryName(this.countryName);
+    this.router.navigate(['/countries']);
   }
 }
