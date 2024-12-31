@@ -37,4 +37,10 @@ export class CountriesPage implements OnInit {
     this.countries = result.data;
   }
 
+  openNews(countryName: string, countryCode: string) {
+    this.mds.setCountryName(countryName);
+    this.mds.setCountryCode(countryCode);
+    this.router.navigate(['/news']);
+  }
+
 }
