@@ -43,4 +43,13 @@ export class CountriesPage implements OnInit {
     this.router.navigate(['/news']);
   }
 
+  openWeather(country: any) {
+    const countryDetails = {
+      capital: country.capital[0],
+      latlng: country.latlng,
+    }
+    this.mds.setCountryDetails(countryDetails);
+    this.router.navigate(['/weather']);
+  }
+
 }

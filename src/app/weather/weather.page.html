@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Weather for {{ capital }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h3>Weather for {{ capital }}</h3>
+
+  <!-- Weather Details -->
+  <div *ngIf="weatherIcon && description">
+    <img [src]="weatherIcon" />
+    <p>Description: {{ description }}</p>
+    <p>
+      Temperature: {{ temperature }}° {{ units === 'metric' ? 'C' : units ===
+      'imperial' ? 'F' : 'K' }}
+    </p>
+  </div>
+
+  <div *ngIf="!weatherIcon && !description">
+    <p>No weather information available for {{ capital }}</p>
+  </div>
+</ion-content>

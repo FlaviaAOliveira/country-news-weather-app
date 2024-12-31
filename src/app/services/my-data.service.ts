@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class MyDataService {
   private countryName: string = '';
   private countryCode: string = '';
+  private countryDetails: any = null;
 
   setCountryName(name: string) {
     this.countryName = name;
@@ -15,7 +16,6 @@ export class MyDataService {
     return this.countryName;
   }
 
-
   setCountryCode(code: string) {
     this.countryCode = code;
   }
@@ -23,7 +23,15 @@ export class MyDataService {
   getCountryCode(): string {
     return this.countryCode;
   }
-  constructor() { }
 
+  setCountryDetails(details: any) {
+    this.countryDetails = details;
+  }
+
+  getCountryDetails(): any {
+    return this.countryDetails;
+  }
+
+  constructor() { }
 
 }
