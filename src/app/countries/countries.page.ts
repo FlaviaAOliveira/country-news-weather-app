@@ -57,4 +57,9 @@ export class CountriesPage implements OnInit {
     this.router.navigate(['/neighbours']);
   }
 
+  openCountryInfo(country: any) {
+    this.mds.setCountryDetails(country); 
+  this.router.navigate(['/country-details']); 
+  }
+
 }

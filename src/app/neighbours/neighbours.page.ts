@@ -31,7 +31,7 @@ export class NeighboursPage implements OnInit {
           if (result.data && result.data[0]) {
             this.neighbors.push({
               flag: result.data[0].flags?.png,
-              code: result.data[0].cca3,
+              code: result.data[0].cioc,
             });
           }
           

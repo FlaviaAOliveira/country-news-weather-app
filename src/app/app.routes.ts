@@ -30,4 +30,8 @@ export const routes: Routes = [
     path: 'neighbours',
     loadComponent: () => import('./neighbours/neighbours.page').then( m => m.NeighboursPage)
   },
+  {
+    path: 'country-details',
+    loadComponent: () => import('./country-details/country-details.page').then( m => m.CountryDetailsPage)
+  },
 ];

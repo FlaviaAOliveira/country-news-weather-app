@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CountryDetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ country.name?.official }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Capital:</strong> {{ capital }}</p>
+      <p><strong>Region:</strong> {{ region }}</p>
+      <p><strong>Timezones:</strong></p>
+      <ul>
+        <li *ngFor="let timezone of timezones">{{ timezone }}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
