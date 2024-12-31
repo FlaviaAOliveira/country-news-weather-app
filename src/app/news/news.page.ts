@@ -35,7 +35,6 @@ export class NewsPage implements OnInit {
     };
 
     let result = await this.mhs.get(options);
-    console.log("API response:", result);
     
     if (result.data && result.data.results && result.data.results.length > 0) {
       this.newsStories = result.data.results;

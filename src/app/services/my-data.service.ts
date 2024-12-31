@@ -7,6 +7,7 @@ export class MyDataService {
   private countryName: string = '';
   private countryCode: string = '';
   private countryDetails: any = null;
+  private countryBorders: string[] = [];
 
   setCountryName(name: string) {
     this.countryName = name;
@@ -31,6 +32,15 @@ export class MyDataService {
   getCountryDetails(): any {
     return this.countryDetails;
   }
+
+  setCountryBorders(borders: string[]) {
+    this.countryBorders = borders;
+  }
+
+  getCountryBorders(): string[] {
+    return this.countryBorders;
+  }
+
 
   constructor() { }
 

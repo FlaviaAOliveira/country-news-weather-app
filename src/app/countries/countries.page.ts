@@ -52,4 +52,9 @@ export class CountriesPage implements OnInit {
     this.router.navigate(['/weather']);
   }
 
+  openNeighbours(country: any) {
+    this.mds.setCountryBorders(country.borders);
+    this.router.navigate(['/neighbours']);
+  }
+
 }
